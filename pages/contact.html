@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rejoindre la communauté - Être Soi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function submitForm(e) {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const email = "ninalemoine@icloud.com";
+            const subject = "Nouvelle demande de contact - Être Soi";
+            const body = `Nom: ${formData.get('name')}\nEmail: ${formData.get('email')}\nMessage: ${formData.get('message')}`;
+            
+            // Afficher le message de succès
+            document.getElementById('form-container').classList.add('hidden');
+            document.getElementById('success-message').classList.remove('hidden');
+            
+            // Envoyer par email (simulation - dans un environnement réel, utilisez un backend)
+            console.log(`Email serait envoyé à: ${email}`);
+            console.log(`Sujet: ${subject}`);
+            console.log(`Corps: ${body}`);
+            
+            // Dans un environnement de production, vous utiliseriez un service côté serveur pour envoyer le mail
+        }
+    </script>
+</head>
+<body class="bg-[#FFF8F3] text-[#3B2F2F]">
+    <!-- En-tête -->
+    <header class="bg-white shadow-sm fixed w-full z-10">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="../index.html" class="font-bold text-xl text-[#8E443D]">Être Soi</a>
+            <a href="../index.html" class="text-[#DC7F4A] hover:underline">Retour à l'accueil</a>
+        </div>
+    </header>
+
+    <!-- Formulaire de contact -->
+    <section class="pt-32 pb-20 px-6">
+        <div class="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow">
+            <h1 class="text-3xl font-bold mb-6 text-[#8E443D] text-center">Rejoindre la communauté</h1>
+            
+            <div id="form-container">
+                <p class="mb-8 text-center">Complétez ce formulaire pour rejoindre notre communauté et être tenu·e informé·e des actualités d'Être Soi.</p>
+                
+                <form onsubmit="submitForm(event)" class="space-y-6">
+                    <div>
+                        <label for="name" class="block mb-1 font-medium">Nom complet</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#DC7F4A]">
+                    </div>
+                    
+                    <div>
+                        <label for="email" class="block mb-1 font-medium">Email</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#DC7F4A]">
+                    </div>
+                    
+                    <div>
+                        <label for="message" class="block mb-1 font-medium">Message (optionnel)</label>
+                        <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#DC7F4A]"></textarea>
+                    </div>
+                    
+                    <div class="flex justify-center">
+                        <button type="submit" class="px-6 py-2 bg-[#DC7F4A] hover:bg-[#c56e3b] text-white rounded-md transition">Envoyer</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div id="success-message" class="hidden">
+                <div class="text-center p-6 bg-[#F3D2C1] rounded-lg">
+                    <svg class="w-16 h-16 text-[#8E443D] mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <h2 class="text-2xl font-semibold text-[#8E443D] mb-2">Message envoyé !</h2>
+                    <p class="mb-4">Merci de votre intérêt pour notre communauté. Nous vous contacterons très prochainement !</p>
+                    <a href="../index.html" class="inline-block px-4 py-2 bg-[#DC7F4A] hover:bg-[#c56e3b] text-white rounded-md transition">Retour à l'accueil</a>
+                </div>
+            </div>
+            
+            <!-- Coordonnées -->
+            <div class="mt-12 pt-8 border-t border-gray-200">
+                <h2 class="text-xl font-semibold mb-4 text-[#8E443D]">Contactez-nous directement</h2>
+                <div class="space-y-2">
+                    <p><span class="font-medium">Nina LEMOINE</span></p>
+                    <p>📱 07 83 38 99 33</p>
+                    <p>📧 <a href="mailto:ninalemoine@icloud.com" class="text-[#DC7F4A] hover:underline">ninalemoine@icloud.com</a></p>
+                    <p>🔗 <a href="https://www.linkedin.com/in/nina-lemoine-/" target="_blank" class="text-[#DC7F4A] hover:underline">LinkedIn</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-sm text-[#5A4742]">
+        <p>© Être Soi – 2025</p>
+        <p>Avec bienveillance, pour toutes les intelligences ❤️</p>
+    </footer>
+</body>
+</html> 

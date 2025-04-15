@@ -1,0 +1,111 @@
+import React from "react";
+import { Button } from "@/components/ui/button";
+
+export default function LandingPage() {
+  return (
+    <div className="bg-[#FFF8F3] text-[#3B2F2F]">
+      {/* Hero Section */}
+      <section className="text-center py-20 px-6 max-w-3xl mx-auto">
+        <h1 className="text-4xl font-bold mb-4 text-[#8E443D]">
+          Et si être différent, c'était justement votre superpouvoir ?
+        </h1>
+        <p className="text-lg mb-8">
+          Une plateforme bienveillante pour détecter, comprendre et accompagner les personnes HPI et hypersensibles dans leur parcours personnel et professionnel.
+        </p>
+        <div className="flex justify-center gap-4">
+          <Button className="bg-[#DC7F4A] hover:bg-[#c56e3b] text-white">Rejoindre la communauté</Button>
+          <Button variant="outline" className="border-[#DC7F4A] text-[#DC7F4A] hover:bg-[#F3EAE5]">Être informé·e du lancement</Button>
+        </div>
+      </section>
+
+      {/* Chiffres clés */}
+      <section className="py-20 px-6 bg-[#FBE7DD]">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl font-semibold mb-10 text-[#8E443D]">Quelques chiffres clés</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <p className="text-5xl font-bold text-[#DC7F4A]">2,3 millions</p>
+              <p className="mt-2">de personnes potentiellement HPI en France (environ 3% de la population)</p>
+            </div>
+            <div>
+              <p className="text-5xl font-bold text-[#DC7F4A]">70%</p>
+              <p className="mt-2">des HPI ne sont pas diagnostiqués ou ignorent leur potentiel</p>
+            </div>
+            <div>
+              <p className="text-5xl font-bold text-[#DC7F4A]">1 000 €</p>
+              <p className="mt-2">coût moyen d’un test de détection HPI en libéral</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Témoignages */}
+      <section className="py-20 px-6 bg-[#FFF8F3]">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-semibold mb-10 text-[#8E443D]">Ils l’ont vécu, ils témoignent</h2>
+          <div className="space-y-10">
+            <div className="bg-[#FBE7DD] p-6 rounded-xl shadow">
+              <p className="italic">"Je me suis toujours sentie différente. Être Soi m’a aidée à comprendre que ce n’était pas une faiblesse, mais une richesse."</p>
+              <p className="mt-4 font-semibold">– Sarah, 34 ans</p>
+            </div>
+            <div className="bg-[#FBE7DD] p-6 rounded-xl shadow">
+              <p className="italic">"Découvrir que j’étais HPI à 40 ans a changé ma vie. Le test en ligne m’a donné une première piste précieuse."</p>
+              <p className="mt-4 font-semibold">– Karim, 42 ans</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pré-test */}
+      <section className="py-20 px-6 bg-[#FFF0E8] text-center">
+        <div className="max-w-2xl mx-auto">
+          <h2 className="text-2xl font-semibold mb-4 text-[#8E443D]">Et si vous faisiez le premier pas ?</h2>
+          <p className="mb-6">Un test d'orientation gratuit pour commencer à explorer votre potentiel en douceur.</p>
+          <Button className="bg-[#DC7F4A] hover:bg-[#c56e3b] text-white">Faire le pré-test</Button>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 px-6 bg-[#FFF0E8]">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-semibold text-center mb-10 text-[#8E443D]">Foire aux questions</h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="font-semibold text-lg text-[#DC7F4A]">Qu’est-ce qu’un HPI ?</h3>
+              <p>HPI signifie Haut Potentiel Intellectuel. Il s'agit de personnes ayant un quotient intellectuel (QI) supérieur à 130, mais cela inclut aussi une manière de penser, de ressentir et d’interagir avec le monde différente de la norme.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-lg text-[#DC7F4A]">Qu’est-ce qu’un profil neuroatypique ?</h3>
+              <p>Un profil neuroatypique regroupe toutes les personnes dont le fonctionnement neurologique diffère des standards. Cela inclut les HPI, les hypersensibles, mais aussi les personnes autistes, dys, TDAH, etc.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-lg text-[#DC7F4A]">Comment détecter un HPI ?</h3>
+              <p>Le diagnostic officiel se fait via un bilan psychométrique encadré par un professionnel (souvent un psychologue). Nous travaillons à rendre un premier repérage plus accessible via un outil en ligne bienveillant et libre.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-lg text-[#DC7F4A]">Pourquoi ce projet ?</h3>
+              <p>Parce que trop de personnes HPI se sentent en décalage sans comprendre pourquoi. Parce que les tests sont chers. Et parce que tout le monde mérite un espace pour mieux se comprendre, sans étiquette ni stigmatisation.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-20 px-6 text-center bg-[#F3D2C1]">
+        <h2 className="text-2xl font-semibold mb-4 text-[#8E443D]">Prêt·e à faire partie de l’aventure ?</h2>
+        <p className="mb-6">Rejoignez une communauté qui vous ressemble. Découvrez, testez, explorez… en toute liberté.</p>
+        <div className="flex justify-center gap-4">
+          <Button className="bg-[#DC7F4A] hover:bg-[#c56e3b] text-white">Rejoindre la communauté</Button>
+          <Button variant="outline" className="border-[#DC7F4A] text-[#DC7F4A] hover:bg-[#FBE7DD]">Être informé·e du lancement</Button>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-10 text-center text-sm text-[#5A4742]">
+        <p>© Être Soi – 2025</p>
+        <p>Contact : bonjour@etresoi.app</p>
+        <p>Avec bienveillance, pour toutes les intelligences ❤️</p>
+      </footer>
+    </div>
+  );
+}
